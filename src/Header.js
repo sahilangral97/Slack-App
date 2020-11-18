@@ -1,18 +1,25 @@
+import { Avatar } from '@material-ui/core';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import SearchIcon from '@material-ui/icons/Search';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import React from 'react'
-
+import "./header.css"
 function Header() {
     return (
         <div className="header">
             <div className="header__left">
-                {/* user avatar*/}
-                {/* time logo*/}                
+                    <Avatar className="header_avatar"
+                        src = ""
+                        alt = ""
+                    />
+                    <AccessTimeIcon />
             </div>
             <div className="header__search">
-                {/* search logo*/}
-                {/* input field*/}
+                <SearchIcon />
+                <input placeholder="Search in Slack App" />
             </div>
             <div className="header__right">
-                {/* help logo*/}
+                <HelpOutlineIcon />
             </div>
 
             
