@@ -5,6 +5,12 @@
     max-width: 260px;
 }
 
+.sidebar > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #49274b;
+}
+
 .sidebar_header{
     display: flex;
     border-bottom: 1px solid #49274b;
@@ -28,6 +34,14 @@
     font-size: 13px;
     font-weight: 400;
 }
+
+.sidebar_info > h3 > .MuiSvgIcon-root{
+    font-size: 14px;
+    color: green;
+    margin-top: 1px;
+    margin-right: 2px;
+}
+
 .sidebar_header > .MuiSvgIcon-root{
     padding: 8px;
     color: #49274b;
