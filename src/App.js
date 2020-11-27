@@ -1,15 +1,23 @@
 import './App.css';
+import { useState } from 'react';
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat"
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Login from './Login';
+import { useStateValue } from './StateProvider';
 
 function App() {
+  const [{user} , dispatch] = useStateValue();
+
   return (
     <div className="App">
       <Router>
-        <Header />
-        <div className="app_body">
+        {!user ? 
+         <Login/> : (
+          <>
+         <Header />
+          <div className="app_body">
           <Sidebar />
           <Switch>
             <Route path="/room/:roomId">
@@ -21,6 +29,8 @@ function App() {
             
           </Switch>
         </div>
+        </>
+        )}
       </Router>
     </div>
   );
